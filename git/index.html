@@ -5,36 +5,7 @@
 </head>
 <body>
 <p>
-	-- 14. Nombre de clients habitant “Paris”
-SELECT COUNT(cl.Num_Client), cl.Ville
-FROM CLIENT cl
-WHERE cl.Ville ="Paris";
-
---2e solution mais sinon tu as réussi mel!!
-SELECT COUNT(*) FROM CLIENT WHERE Ville = "Paris";
-
--- 15. Nombre de clients de l'agence “Paris-Bastille” n'ayant pas leur adresse dans la relation 
--- CLIENT
-SELECT count(cl.Num_Client), a.nom, c.Num_Client, cl.Num_Client	, a.Num_Agence, c.Num_Agence	
-FROM AGENCE a, COMPTE c, CLIENT cl
-WHERE cl.Num_CLient = c.Num_Client
-AND c.Num_Agence= a.Num_Agence	
-AND a.nom = "Paris- Bastille"
-MINUS SELECT 
-
--- 16. Insérer le n-uplet <Martin, Paris> dans la relation CLIENT
-INSERT INTO CLIENT VALUES (,"Martin","Paris");
-
--- 17. Diminuer l'emprunt de tous les clients habitant “Marseille” de “5%”
---Correction -
-UPDATE EMPRUNT SET Montant = Montant * 0.95
-WHERE Num_Client IN (SELECT Num_Client FROM CLIENT WHERE Ville = "Marseille");
--- 18. Fermer les comptes de “Dupont”
---Correction
-DELETE FROM COMPTE 
-WHERE Num_Client IN (Select Num_Client FROM CLIENT WHERE Nom = "Dupont");
--- 19. Supprimer de la relation AGENCE toutes les agences sans client
-DELETE FROM AGENCE WHERE Num_Client NOT IN (SELECT Num_Client FROM COMPTE c WHERE c.Num_Agence = a.Num_agence);
+	This is a paragraphe
 </p>
 
 </body>
